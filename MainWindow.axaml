@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="using:AvaloniaDashStyleBug"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaDashStyleBug.MainWindow"
+        Title="AvaloniaDashStyleBug">
+    <Button Width="150" Height="75">
+        <Button.Styles>
+            <Style Selector="Button">
+                <Setter Property="Template">
+                    <ControlTemplate>
+                        <DockPanel>
+                            <controls:ListBoxHierachyLine Name="PART_LastWorkspaceHierarchyLine"
+                                                        Foreground="Gray"
+                                                        LineThickness="2"
+                                                        Width="45"
+                                                        TopOffset="0">
+                                <controls:ListBoxHierachyLine.LineDashStyle>
+                                    <DashStyle Dashes="2,2" Offset="1" />
+                                </controls:ListBoxHierachyLine.LineDashStyle>
+                            </controls:ListBoxHierachyLine>
+                        </DockPanel>
+                    </ControlTemplate>
+                </Setter>
+            </Style>
+        </Button.Styles>
+    </Button>
+</Window>
